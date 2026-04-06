@@ -1,0 +1,5 @@
+{
+  "name": "Control Logístico Geo",
+  "description": "App para toma de fotos con georreferencia para control de personal en calle. Guarda fotos localmente y permite sincronización con Google Drive.",
+  "requestFramePermissions": ["camera", "geolocation"]
+}
