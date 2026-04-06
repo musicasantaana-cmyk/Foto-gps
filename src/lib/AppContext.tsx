@@ -4,6 +4,8 @@ interface AppSettings {
   user: string;
   zone: string;
   googleConnected: boolean;
+  backupEmail: string;
+  driveFolderId: string;
 }
 
 interface AppContextType {
@@ -16,7 +18,7 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [settings, setSettings] = useState<AppSettings>(() => {
     const saved = localStorage.getItem('logistica-settings');
-    return saved ? JSON.parse(saved) : { user: '', zone: '', googleConnected: false };
+    return saved ? JSON.parse(saved) : { user: '', zone: '', googleConnected: false, backupEmail: '', driveFolderId: '' };
   });
 
   useEffect(() => {
